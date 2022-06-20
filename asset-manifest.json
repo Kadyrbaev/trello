@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/trello/static/css/main.4fdc2e36.css",
-    "main.js": "/trello/static/js/main.ad15527c.js",
-    "static/media/ocean.avif": "/trello/static/media/ocean.0c1d4d3201abfb7f95d9.avif",
-    "index.html": "/trello/index.html",
-    "main.4fdc2e36.css.map": "/trello/static/css/main.4fdc2e36.css.map",
-    "main.ad15527c.js.map": "/trello/static/js/main.ad15527c.js.map"
+    "main.css": "/trello2/static/css/main.4fdc2e36.css",
+    "main.js": "/trello2/static/js/main.0c245a0e.js",
+    "static/media/ocean.avif": "/trello2/static/media/ocean.0c1d4d3201abfb7f95d9.avif",
+    "index.html": "/trello2/index.html",
+    "main.4fdc2e36.css.map": "/trello2/static/css/main.4fdc2e36.css.map",
+    "main.0c245a0e.js.map": "/trello2/static/js/main.0c245a0e.js.map"
   },
   "entrypoints": [
     "static/css/main.4fdc2e36.css",
-    "static/js/main.ad15527c.js"
+    "static/js/main.0c245a0e.js"
   ]
 }

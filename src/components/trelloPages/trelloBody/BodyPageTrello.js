@@ -21,12 +21,12 @@ const BodyPageTrello=()=>{
             <DIv3 >
             
             <Div onClick={divHandler}>+
-                <div className="fix" primary>
+                <Fix>
                     {!state && <ModalForm/>}
-                </div>        
+                </Fix>        
                
             </Div>
-            <div className="ss">
+            <div>
             
             <FormTrello/>
             </div>
@@ -49,9 +49,7 @@ const FonImage = createGlobalStyle`
 
 export const BodyTrello = styled.div`
 width: 100%;
-//height: 606px;
-
-    
+  
 `
 const Div = styled.div `
     margin-top: -20px;
@@ -64,10 +62,11 @@ const Div = styled.div `
     padding: 4px;
     margin-left: -10px;
     position: fixed;
-    .fix{
+  
+`
+const Fix = styled.div`
         background-color: hsla(0,1%,200%,0.16);
         height: 540px;
-    }
 `
 const DIv3 = styled.div`
         display: flex;

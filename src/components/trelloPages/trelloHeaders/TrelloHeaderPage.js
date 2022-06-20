@@ -1,8 +1,15 @@
 
+import { useDispatch } from "react-redux"
 import styled from "styled-components"
+import { todoActions } from "../../../store/reducers/todoSlice"
 
 
 const TrelloHeaderPage=()=>{
+    const dispatch=useDispatch()
+
+    function searchHandler(e){
+        dispatch(todoActions.search(e.target.value))
+    }
 
     return(
         <TrelloHeader>
@@ -20,7 +27,7 @@ const TrelloHeaderPage=()=>{
             </div>
             <div className="inp-div">
                 <div className="poisk-inp">
-                <InputHeader placeholder="Поиск..."></InputHeader>
+                <InputHeader onChange={searchHandler} type="text" placeholder="Поиск..."></InputHeader>
                 </div>
                 <div className="icons">
                     <h3>🔍</h3>
@@ -94,12 +101,12 @@ margin-top: -10px;
     }
     .icons{
         display: flex;
-        justify-content: flex-end;
-        width: 70px;
+        width: 90px;
         justify-content: space-between;
     }
     .poisk-inp{
         width: 480px;
+        display: flex;
         justify-content: flex-end;
     }
 `
@@ -113,12 +120,13 @@ margin-top: -10px;
         &:focus{
             width: 500px;
             background-color: white;
-            color: grey;
+            color: black;
             border: 2px solid blue;
         }
         &::placeholder{
             color: white;
         }
+   
 
     
 `

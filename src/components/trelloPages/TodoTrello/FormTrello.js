@@ -13,7 +13,7 @@ function FormTrello(){
 
     const dispatch = useDispatch()
     const[data, setData] = useState('')
-    console.log(data);
+
     function changeHandler(e){
         setData(e.target.value)
     }

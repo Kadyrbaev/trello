@@ -1,9 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit"
+import { useEffect } from "react";
 
 const initialState = {
     todos: [],
-    name:'sadyr',
-    pass: '12345',
+    searchName:"",
+    name:'sadyr@gmail.com',
+    pass: '123456',
     isLoaded: false,
     renderTextareaIsLoaded: false
 }
@@ -19,17 +21,7 @@ const cartSlice = createSlice({
                 textarea: [],
             })
         },
-        
-        fetchRequest(state, action){
-            let obj;
-            let pass
-            for(let key in action.payload){
-               obj=action.payload[key].name
-               pass=action.payload[key].pass
-            }
-            state.name= obj
-            state.pass = pass
-        },
+
         validation(state,action){
             console.log(action);
             console.log(state.name);
@@ -41,12 +33,14 @@ const cartSlice = createSlice({
         },
         textareaTodo(state,action){
             console.log(action);
+            if(action.payload.value !==""){
             const id = action.payload.id
             const newItem = state.todos.find((el)=>el.id ===id)
             newItem.textarea.push({
             name: action.payload.value,
             id: Math.random().toString()
-          })      
+          })  
+        }    
         },
         deleteCart(state,action){
             console.log(action.payload);
@@ -56,6 +50,9 @@ const cartSlice = createSlice({
                 }
             })
             state.todos = newTodos
+        },
+        search(state,action){
+            state.searchName = action.payload
         }
     }
 })

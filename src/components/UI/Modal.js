@@ -22,12 +22,32 @@ import { uiActions } from "../../store/reducers/uiSlice"
 
     return(
     <OverlayModal>
-        
         <div>
             <div>
-                <span>Действия со списком</span>
-                <span onClick={modalHandler}>✕</span>
+                <h2>🕑  JS-5</h2>
             </div>
+            <div>
+                <h2>≢  Описание</h2>
+                <BackColor>Добавить  более подробное описание...</BackColor>
+            </div>
+            <div>
+                <h2>≋ Действия</h2>
+                <p>Показать подробности</p>
+            </div>
+            <div>
+                <Two>SU</Two>
+                <input placeholder="Напишите коментарий"></input>
+            </div>
+        </div>
+        
+        <div  onClick={modalHandler}><span onClick={modalHandler}>✕</span>
+            <div>
+                <span>Действия со списком</span>
+            </div>
+            <h5>⨕ Участники</h5>
+            <h5>® Метки</h5>
+            <h5>© Чек Лист</h5>
+            <h5>🕑 Даты</h5>
             <hr></hr>
             <div>Добавить карточку...</div>
             <div>Копировать список...</div>
@@ -57,6 +77,7 @@ function Modal(props){
 export default Modal
 
 const Over = styled.div`
+border: 1px solid red;
 background-color: rgba(0, 0, 0, 0.20);
   width: 100vw;
   height: 100vh;
@@ -67,20 +88,27 @@ background-color: rgba(0, 0, 0, 0.20);
   position: absolute; 
 `
 const OverlayModal = styled.div`
-color: black;
-      width: 200px;
-      padding: 16px;
-      font-size: 14px;
-  height: 400px;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    width: 600px;
+    padding: 26px;
+    font-size: 14px;
+  height: 550px;
   background: white;
   z-index: 10;
   border-radius: 16px;
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
     cursor: pointer;
   position: fixed;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  & input{
+    width: 340px;
+    padding: 8px;
+  }
 
   & div{
     margin-top: 8px;
@@ -90,7 +118,22 @@ color: black;
     background-color: white;
   }
 `
-const Container = styled.div`
-    display: flex;
-    flex-direction: column;
+// const Container = styled.div`
+//     display: flex;
+//     flex-direction: column;
+// `
+const BackColor=styled.div`
+    background-color: rgb(204, 200, 200);
+    padding: 20px;
+    width: 326px;
+
+`
+const Two=styled.div`
+    background-color: green;
+    padding: 6px;
+    width: 20px;
+    font-weight: 700;
+    border-radius: 50%;
+    color: white;
+    margin-bottom: 10px;
 `

@@ -10,14 +10,14 @@ const RegistrPage=()=>{
             <div className="trello-img">
                 <img src="https://static.helpjuice.com/helpjuice_production/uploads/upload/image/4752/direct/1579793583114-Trello%20Alternatives.jpg"></img>
             </div>
-            <div className="wrap">
-            <div className="cont">
+            <Wrap>
+            <Cont>
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS97gxjjrCUUFLAXGfLDD4tfArCwMjwsyof77meD0_xuAX_RInojSD_0FvRtmsl5Qz3gA&usqp=CAU"></img>
-            </div>
+            </Cont>
             <RegistrPageSection/>
             
             <RegistrPageFooter/>
-            </div>
+            </Wrap>
             <div className="trello-img2">
                 <img src="https://1361fotz2gc2yz52n1h6cjyb-wpengine.netdna-ssl.com/wp-content/uploads/2021/02/migration.svg"></img>
             </div>
@@ -27,25 +27,26 @@ const RegistrPage=()=>{
 }
 export default RegistrPage
 
+const Wrap = styled.div`
+     margin: auto;
+    width: 640px;
+`
+const Cont = styled.div`
+        width: 183px;
+        display: flex;
+        margin:30px auto;
+     &   img{
+        width: 180px;
+        height: 50px;
+    }
+`
+
 export const RecommendItem = styled.div`
     display: flex;
     align-items: flex-end;
     margin: auto;
     width: 96%;
-    .wrap{
-        margin: auto;
-        width: 640px;
-    }
-    .cont img{
-        width: 180px;
-        height: 50px;
-    }
-    .cont{
-        width: 183px;
-        display: flex;
-        margin:30px auto;
- 
-    }
+
     & h1{
         display: flex;
         font-size: 60px;
@@ -94,4 +95,4 @@ export const RecommendItem = styled.div`
         z-index: -1;
     }
     }
-`;
+`

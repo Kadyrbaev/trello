@@ -4,7 +4,6 @@ import styled, { css } from "styled-components"
 import TextareaTodo from "./TextareaTodo"
 import { todoActions } from "../../../store/reducers/todoSlice"
 import ReactTextareaAutosize from "react-textarea-autosize"
-import { uiActions } from "../../../store/reducers/uiSlice"
 import Modal from "../../UI/Modal"
 
 
@@ -20,16 +19,15 @@ const RenderTrello=(props)=>{
     const dispatch=useDispatch()
 
     function onResize(e){
-
         setValue(e.target.value)
     }
     function saveCartHandler(id){
         setValue('')
-        dispatch(todoActions.textareaTodo({value,id}))
+            dispatch(todoActions.textareaTodo({value,id}))
+        
     }
     function deleteHandler(){
         dispatch(todoActions.deleteCart(props.id))
-        console.log(props.id);
     }
 
     return(

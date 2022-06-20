@@ -18,12 +18,12 @@ const RegistrPageSection=()=>{
 
     const dispatch = useDispatch()
 
-    useEffect(()=>{
-        dispatch(fetchPost({name:'sadyr@gmail.com', pass: "123456"}))
-    },[])
-    useEffect(()=>{
-        dispatch(FetchList())
-    },[name,password])
+    // useEffect(()=>{
+    //     dispatch(fetchPost({name:'sadyr@gmail.com', pass: "123456"}))
+    // },[])
+    // useEffect(()=>{
+    //     dispatch(FetchList())
+    // },[name,password])
 
     function inpHand(e){
        setName(e.target.value)
@@ -31,7 +31,7 @@ const RegistrPageSection=()=>{
     function inpPass(e){
         setPassword(e.target.value)
     }
-    
+
     let validation;
     if(password.length>0 && password.length<5){
         console.log(555);

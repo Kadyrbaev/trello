@@ -21,12 +21,14 @@ function TextareaTodo(props){
 }
 export default TextareaTodo
 
-const Areatext = styled.button`
+const Areatext = styled.div`
 
     border: none;
     display: flex;
     flex-direction: column;
     width: 100%;
+    color: black;
+    font-size: 14px;
     margin-left: -6px;
     margin-bottom: 8px;
     background-color: white;
